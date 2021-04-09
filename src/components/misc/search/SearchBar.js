@@ -56,7 +56,7 @@ export default function SearchBar() {
   useEffect(() => {
     if (!focus) {
       setCurrent(0)
-      input.current.blur()
+      input.current && input.current.blur()
     }
   }, [focus])
 

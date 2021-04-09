@@ -16,11 +16,19 @@ const Content = styled.div`
   width: 46rem;
   margin: 0 auto;
   padding: 0 0.5rem;
+
+  ${(props) => props.theme.mq.small} {
+    width: 100%;
+  }
 `
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  ${(props) => props.theme.mq.small} {
+    flex-direction: column;
+  }
 `
 
 export default function Search() {

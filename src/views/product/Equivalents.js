@@ -7,7 +7,12 @@ import Emoji from 'components/base/Emoji'
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 -1rem 2rem;
+
+  ${(props) => props.theme.mq.small} {
+    margin: 0 -0.5rem 2rem;
+  }
 `
 const Title = styled.h2`
   position: relative;
@@ -25,6 +30,15 @@ const Equivalent = styled.div`
   text-align: center;
   background-color: ${(props) => props.theme.colors.second};
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+
+  ${(props) => props.theme.mq.small} {
+    width: calc(50% - 1rem);
+    margin: 0 0.5rem 1rem;
+
+    button {
+      font-size: 0.875rem;
+    }
+  }
 `
 const Top = styled.div`
   margin-bottom: 1.5rem;

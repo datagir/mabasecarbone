@@ -7,11 +7,19 @@ const Wrapper = styled.div`
   text-align: center;
   background-color: ${(props) => props.theme.colors.second};
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+
+  ${(props) => props.theme.mq.small} {
+    min-width: auto;
+  }
 `
 const Total = styled.span`
   display: block;
   font-size: 4rem;
   font-weight: 700;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 3rem;
+  }
 `
 const Unit = styled.span`
   display: block;

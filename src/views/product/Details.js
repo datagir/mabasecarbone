@@ -17,7 +17,9 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
 `
-const Content = styled.div``
+const Content = styled.div`
+  text-align: center;
+`
 export default function Details(props) {
   const [open, setOpen] = useState(false)
   return (

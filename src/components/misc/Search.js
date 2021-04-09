@@ -11,7 +11,8 @@ const Wrapper = styled.div`
   transition: height 400ms ease-out;
 
   ${(props) => props.theme.mq.small} {
-    height: 10rem;
+    height: ${(props) => (props.small ? '5rem' : '10rem')};
+    margin-bottom: 4rem;
   }
 `
 const Content = styled.div`

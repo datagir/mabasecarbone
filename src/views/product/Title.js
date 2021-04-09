@@ -4,11 +4,20 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   flex: 1;
   margin-right: 3rem;
+
+  ${(props) => props.theme.mq.small} {
+    margin: 0 0 2rem;
+    text-align: center;
+  }
 `
 const Name = styled.h1`
   margin: 0.5rem 0;
   font-size: 2.25rem;
   line-height: 1.2;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 2rem;
+  }
 `
 const Attribute = styled.span`
   display: block;
@@ -16,6 +25,10 @@ const Attribute = styled.span`
   font-size: 1.5rem;
   line-height: 1.3;
   opacity: 0.75;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 1.25rem;
+  }
 `
 const Border = styled.span`
   display: block;
@@ -24,6 +37,10 @@ const Border = styled.span`
   font-weight: 200;
   line-height: 1.3;
   opacity: 0.75;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 1.25rem;
+  }
 `
 const Location = styled.div`
   font-size: 0.875rem;
