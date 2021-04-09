@@ -6,7 +6,6 @@ import repufrancaise from './footer/repufrancaise.jpg'
 
 import MagicLink from 'components/base/MagicLink'
 import ThemeToggle from 'components/base/ThemeToggle'
-import Emoji from 'components/base/Emoji'
 import ContactPrompt from 'components/base/ContactPrompt'
 import Button from 'components/base/Button'
 import Logo from 'components/base/Logo'
