@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import styled from 'styled-components'
-import { useHistory } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import { matchSorter } from 'match-sorter'
 
 import { useSearch } from 'utils/api'
@@ -32,6 +32,7 @@ const Wrapper = styled.form`
 
 export default function SearchBar() {
   let history = useHistory()
+  const location = useLocation()
 
   const { search, setSearch, debouncedSearch } = useContext(SearchContext)
 
@@ -59,7 +60,9 @@ export default function SearchBar() {
   }, [focus])
 
   const navigateToProduct = (product) => {
-    history.push(`/product/${product[`Identifiant_de_l'élément`]}`)
+    history.push(
+      `/product/${product[`Identifiant_de_l'élément`]}${location.search}`
+    )
     setSearch(product['Nom_base_français'])
     setFocus(false)
   }

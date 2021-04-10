@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
+import MagicLink from 'components/base/MagicLink'
 import SearchContext from 'utils/SearchContext'
 import SearchBar from './search/SearchBar'
 
@@ -26,7 +27,7 @@ const Content = styled.div`
   margin: 0 auto;
   padding: 0 0.5rem;
 `
-const StyledLink = styled(Link)`
+const StyledLink = styled(MagicLink)`
   text-decoration: none;
 `
 const Title = styled.h1`
