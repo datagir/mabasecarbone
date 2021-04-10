@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import { Link, useLocation } from 'react-router-dom'
 
+import SearchContext from 'utils/SearchContext'
 import SearchBar from './search/SearchBar'
 
 const Wrapper = styled.div`
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
   transition: height 400ms ease-out;
 
   ${(props) => props.theme.mq.small} {
-    height: ${(props) => (props.small ? '5rem' : '10rem')};
+    height: ${(props) => (props.small ? '4.5rem' : '10rem')};
     margin-bottom: 4rem;
   }
 `
@@ -37,12 +38,15 @@ const Title = styled.h1`
 
   ${(props) => props.theme.mq.small} {
     font-size: 8vw;
+    font-size: ${(props) => (props.small ? '6vw' : '8vw')};
+
     text-align: center;
   }
 `
 export default function Search() {
   let location = useLocation()
   const [small, setSmall] = useState(false)
+  const { setSearch } = useContext(SearchContext)
   useEffect(() => {
     setSmall(location.pathname !== '/')
   }, [location])
@@ -50,7 +54,7 @@ export default function Search() {
   return (
     <Wrapper small={small}>
       <Content>
-        <StyledLink to='/'>
+        <StyledLink to='/' onClick={() => setSearch('')}>
           <Title small={small}>Ma Base Carbone</Title>
         </StyledLink>
         <SearchBar />

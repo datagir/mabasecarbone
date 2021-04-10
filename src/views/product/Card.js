@@ -10,6 +10,9 @@ const Wrapper = styled.div`
 
   ${(props) => props.theme.mq.small} {
     min-width: auto;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
   }
 `
 const Total = styled.span`
@@ -18,13 +21,17 @@ const Total = styled.span`
   font-weight: 700;
 
   ${(props) => props.theme.mq.small} {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `
 const Unit = styled.span`
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
+
+  ${(props) => props.theme.mq.small} {
+    font-size: 1rem;
+  }
 `
 const Uncertainty = styled.span`
   font-size: 0.875rem;

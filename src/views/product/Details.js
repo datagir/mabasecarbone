@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 `
 const Button = styled.button`
   align-self: center;

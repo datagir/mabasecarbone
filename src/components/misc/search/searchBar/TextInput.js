@@ -89,8 +89,17 @@ const Submit = styled.button`
   pointer-events: ${(props) => (props.visible ? 'inherit' : 'none')};
   transition: opacity ${(props) => (props.visible ? 600 : 0)}ms;
 
+  ${(props) => props.theme.mq.small} {
+    padding-right: 0.5rem;
+  }
+
   svg {
     display: block;
+
+    ${(props) => props.theme.mq.small} {
+      width: 1.5rem;
+      height: auto;
+    }
   }
 `
 export default React.forwardRef(function TextInput(props, ref) {

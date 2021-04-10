@@ -2,12 +2,25 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  position: relative;
   flex: 1;
   margin-right: 3rem;
 
   ${(props) => props.theme.mq.small} {
-    margin: 0 0 2rem;
+    margin: 0 0 1.5rem;
+    padding-bottom: 2rem;
     text-align: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background-color: ${(props) => props.theme.colors.text};
+      opacity: 0.5;
+    }
   }
 `
 const Name = styled.h1`
@@ -16,7 +29,8 @@ const Name = styled.h1`
   line-height: 1.2;
 
   ${(props) => props.theme.mq.small} {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
   }
 `
 const Attribute = styled.span`

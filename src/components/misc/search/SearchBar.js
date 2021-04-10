@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import { matchSorter } from 'match-sorter'
 
 import { useSearch } from 'utils/api'
-import useDebounce from 'hooks/useDebounce'
+import SearchContext from 'utils/SearchContext'
 import TextInput from './searchBar/TextInput'
 import Suggestions from './searchBar/Suggestions'
 
@@ -32,11 +32,7 @@ const Wrapper = styled.form`
 export default function SearchBar() {
   let history = useHistory()
 
-  const [focus, setFocus] = useState(false)
-  const input = useRef(null)
-
-  const [search, setSearch] = useState('')
-  const debouncedSearch = useDebounce(search)
+  const { search, setSearch, debouncedSearch } = useContext(SearchContext)
 
   const { data, isFetching, isPreviousData } = useSearch(debouncedSearch)
 
@@ -51,8 +47,9 @@ export default function SearchBar() {
     setCurrent(0)
   }, [data, debouncedSearch, isPreviousData])
 
+  const [focus, setFocus] = useState(false)
+  const input = useRef(null)
   const [current, setCurrent] = useState(0)
-
   useEffect(() => {
     if (!focus) {
       setCurrent(0)

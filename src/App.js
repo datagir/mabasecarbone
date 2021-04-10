@@ -14,7 +14,7 @@ import CO2EModal from 'components/modals/CO2EModal'
 import Web from 'components/layout/Web'
 import Iframe from 'components/layout/Iframe'
 import Product from 'views/Product'
-import Suggestions from 'views/Suggestions'
+import SuggestionsWrapper from 'views/SuggestionsWrapper'
 
 const queryClient = new QueryClient()
 
@@ -42,7 +42,7 @@ function App() {
                               <Product />
                             </Route>
                             <Route path='/'>
-                              <Suggestions />
+                              <SuggestionsWrapper />
                             </Route>
                           </Switch>
                         </Web>
