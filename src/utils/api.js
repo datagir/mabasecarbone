@@ -31,7 +31,7 @@ export function useSearch(search) {
 export function useProduct(id) {
   return useQuery(['product', id], () =>
     fetch(
-      `https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone(r)/lines?qs=_id:"${id}"`
+      `https://koumoul.com/s/data-fair/api/v1/datasets/base-carbone(r)/lines?qs=Identifiant_de_l'élément:"${id}"`
     ).then((res) => res.json())
   )
 }

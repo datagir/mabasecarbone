@@ -15,12 +15,13 @@ const Wrapper = styled.form`
   left: 0.5rem;
   right: 0.5rem;
   background-color: ${(props) => props.theme.colors.background};
+  ${(props) => props.theme.shadow};
   border: 1px solid
     rgba(
       ${(props) => props.theme.colors.quad},
       ${(props) => (props.focus ? 1 : 0.5)}
     );
-  box-shadow: 20px 20px 60px #cacbc6, -20px -20px 60px #ffffff;
+
   transition: box-shadow 200ms ease-out;
   transition: border 200ms ease-out;
 
@@ -58,7 +59,7 @@ export default function SearchBar() {
   }, [focus])
 
   const navigateToProduct = (product) => {
-    history.push(`/product/${product['_id']}`)
+    history.push(`/product/${product[`Identifiant_de_l'élément`]}`)
     setSearch(product['Nom_base_français'])
     setFocus(false)
   }

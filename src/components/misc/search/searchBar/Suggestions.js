@@ -24,6 +24,7 @@ const Suggestion = styled.div`
   }
 
   mark {
+    color: ${(props) => props.theme.colors.text};
     background-color: transparent;
     opacity: 0.5;
   }

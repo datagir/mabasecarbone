@@ -30,19 +30,13 @@ export default function Suggestions(props) {
     <>
       <Title>{props.children}</Title>
       <Listing>
-        <StyledButton to={'/product/6tuDh3gBO_LhSL9Zgthm'}>
-          Repas avec du boeuf
-        </StyledButton>
-        <StyledButton to={'/product/BtuDh3gBO_LhSL9ZkeFi'}>
-          Smartphone classique
-        </StyledButton>
-        <StyledButton to={'/product/utuDh3gBO_LhSL9ZluNy'}>TGV</StyledButton>
-        <StyledButton to={'/product/3tuDh3gBO_LhSL9ZleIx'}>
+        <StyledButton to={'/product/20689'}>Repas avec du boeuf</StyledButton>
+        <StyledButton to={'/product/27010'}>Smartphone classique</StyledButton>
+        <StyledButton to={'/product/28145'}>TGV</StyledButton>
+        <StyledButton to={'/product/27000'}>
           Télévision de 40 à 49 pouces
         </StyledButton>
-        <StyledButton to={'/product/yduDh3gBO_LhSL9ZddAx'}>
-          Ordures ménagères
-        </StyledButton>
+        <StyledButton to={'/product/22066'}>Ordures ménagères</StyledButton>
       </Listing>
     </>
   )

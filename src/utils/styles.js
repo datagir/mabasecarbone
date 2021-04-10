@@ -24,12 +24,15 @@ export const themes = {
       large: `@media screen and (min-width: ${92}em)`,
       xlarge: `@media screen and (min-width: ${2000}px)`,
     },
+    shadow: `box-shadow: 20px 20px 60px #cacbc6, -20px -20px 60px #ffffff`,
   },
   classic: {
     name: 'Classique',
     colors: {
       main: '#EF0D50',
-      second: '#ffffff',
+      second: '#EEF1F9',
+      ter: '#EF0D50',
+      quad: '0, 0, 145',
       background: '#ffffff',
       text: '#32337B',
     },
@@ -50,7 +53,9 @@ export const themes = {
     name: 'Nuit',
     colors: {
       main: '#92F2D2',
-      second: '#1e1e1e',
+      second: '#383838',
+      ter: '#92F2D2',
+      quad: '156, 156, 156',
       background: '#1e1e1e',
       text: '#ffffff',
     },
@@ -72,6 +77,8 @@ export const themes = {
     colors: {
       main: '#000091',
       second: '#ffffff',
+      ter: '#000091',
+      quad: '0, 0, 145',
       background: '#ffffff',
       text: '#1e1e1e',
     },
@@ -87,6 +94,7 @@ export const themes = {
       large: `@media screen and (min-width: ${1800}px)`,
       xlarge: `@media screen and (min-width: ${2000}px)`,
     },
+    shadow: `border: 1px solid rgba(0, 0, 145, 0.2)`,
   },
 }
 
@@ -130,6 +138,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   input {
+    color: ${(props) => props.theme.colors.text};
     text-rendering: geometricPrecision;
   }
 

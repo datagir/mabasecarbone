@@ -7,7 +7,6 @@ import { GlobalStyle } from 'utils/styles'
 import StyleProvider from 'components/providers/StyleProvider'
 import ModalProvider from 'components/providers/ModalProvider'
 import UXProvider from 'components/providers/UXProvider'
-import TransportationProvider from 'components/providers/TransportationProvider'
 import SearchProvider from 'components/providers/SearchProvider'
 
 import CO2EModal from 'components/modals/CO2EModal'
@@ -26,31 +25,29 @@ function App() {
           <UXProvider>
             <StyleProvider>
               <ModalProvider>
-                <TransportationProvider>
-                  <SearchProvider>
-                    <GlobalStyle />
-                    <Switch>
-                      <Route path='/embed'>
-                        <Iframe>
-                          <Product iframe />
-                        </Iframe>
-                      </Route>
-                      <Route>
-                        <Web>
-                          <Switch>
-                            <Route path='/product/:id'>
-                              <Product />
-                            </Route>
-                            <Route path='/'>
-                              <SuggestionsWrapper />
-                            </Route>
-                          </Switch>
-                        </Web>
-                      </Route>
-                    </Switch>
-                    <CO2EModal />
-                  </SearchProvider>
-                </TransportationProvider>
+                <SearchProvider>
+                  <GlobalStyle />
+                  <Switch>
+                    <Route path='/embed'>
+                      <Iframe>
+                        <Product iframe />
+                      </Iframe>
+                    </Route>
+                    <Route>
+                      <Web>
+                        <Switch>
+                          <Route path='/product/:id'>
+                            <Product />
+                          </Route>
+                          <Route path='/'>
+                            <SuggestionsWrapper />
+                          </Route>
+                        </Switch>
+                      </Web>
+                    </Route>
+                  </Switch>
+                  <CO2EModal />
+                </SearchProvider>
               </ModalProvider>
             </StyleProvider>
           </UXProvider>

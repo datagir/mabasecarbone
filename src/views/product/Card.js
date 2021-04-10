@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   padding: 1rem 1rem 1.5rem;
   text-align: center;
   background-color: ${(props) => props.theme.colors.second};
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  ${(props) => props.theme.shadow};
 
   ${(props) => props.theme.mq.small} {
     min-width: auto;

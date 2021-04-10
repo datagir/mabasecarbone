@@ -27,7 +27,7 @@ export default function CO2NumberProvider(props) {
     >
       <ThemeProvider
         theme={{
-          ...themes[accessibility && !embedOpen ? 'classic' : theme],
+          ...themes[accessibility && !embedOpen ? 'night' : theme],
         }}
       >
         {props.children}

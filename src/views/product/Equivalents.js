@@ -29,7 +29,7 @@ const Equivalent = styled.div`
   padding: 1.5rem 1rem;
   text-align: center;
   background-color: ${(props) => props.theme.colors.second};
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  ${(props) => props.theme.shadow};
 
   ${(props) => props.theme.mq.small} {
     width: calc(50% - 1rem);
