@@ -4,8 +4,8 @@ import ModalContext from 'utils/ModalContext'
 export default function ModalProvider(props) {
   const [CO2E, setCO2E] = useState(false)
   const [footprint, setFootprint] = useState(false)
-  const [perimeter, setPerimeter] = useState(false)
-
+  const [transportation, setTransportation] = useState(false)
+  console.log(transportation)
   return (
     <ModalContext.Provider
       value={{
@@ -13,8 +13,8 @@ export default function ModalProvider(props) {
         setCO2E,
         footprint,
         setFootprint,
-        perimeter,
-        setPerimeter,
+        transportation,
+        setTransportation,
       }}
     >
       {props.children}

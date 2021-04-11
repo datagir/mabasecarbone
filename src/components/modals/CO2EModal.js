@@ -30,15 +30,12 @@ export default function CO2EModal() {
         d'équivalent CO<sub>2</sub>.
       </Text>
       <Text>
-        Pour visualiser ce que represente {Math.round(kgco2)} kgCO2<sub>e</sub>{' '}
-        vous pouvez utiliser{' '}
-        <MagicLink
-          to={`https://monconvertisseurco2.fr/?co2=${Math.round(kgco2)}`}
-        >
+        Pour voir plus d'équivalents, vous pouvez utiliser{' '}
+        <MagicLink to={`https://monconvertisseurco2.fr`}>
           notre convertisseur CO2
         </MagicLink>
       </Text>
-      <Button to={`https://monconvertisseurco2.fr/?co2=${Math.round(kgco2)}`}>
+      <Button to={`https://monconvertisseurco2.fr`}>
         Voir Mon Convertisseur CO2
       </Button>
     </Modal>

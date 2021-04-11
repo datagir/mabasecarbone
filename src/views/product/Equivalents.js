@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 
+import ModalContext from 'utils/ModalContext'
 import Button from 'components/base/Button'
 import Emoji from 'components/base/Emoji'
 
@@ -57,6 +58,7 @@ const Label = styled.span`
   font-size: 1rem;
 `
 export default function Equivalents(props) {
+  const { setCO2E, setFootprint, setTransportation } = useContext(ModalContext)
   const value = parseFloat(
     props.result['Total_poste_non_décomposé'].replace(',', '.')
   )
@@ -74,7 +76,7 @@ export default function Equivalents(props) {
               (classique)
             </Label>
           </Top>
-          <Button>En Savoir +</Button>
+          <Button onClick={() => setCO2E(true)}>En Savoir +</Button>
         </Equivalent>
         <Equivalent>
           <Top>
@@ -86,7 +88,7 @@ export default function Equivalents(props) {
               (moteur thermique)
             </Label>
           </Top>
-          <Button>En Savoir +</Button>
+          <Button onClick={() => setTransportation(true)}>En Savoir +</Button>
         </Equivalent>
         <Equivalent>
           <Top>
@@ -94,7 +96,7 @@ export default function Equivalents(props) {
             <Number>{Math.round((value / 10000) * 10000) / 100}%</Number>
             <Label>de l'empreinte carbone annuelle d'un français</Label>
           </Top>
-          <Button>En Savoir +</Button>
+          <Button onClick={() => setFootprint(true)}>En Savoir +</Button>
         </Equivalent>
       </Wrapper>
     </>

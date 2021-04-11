@@ -10,6 +10,8 @@ import UXProvider from 'components/providers/UXProvider'
 import SearchProvider from 'components/providers/SearchProvider'
 
 import CO2EModal from 'components/modals/CO2EModal'
+import FootprintModal from 'components/modals/FootprintModal'
+import TransportationModal from 'components/modals/TransportationModal'
 import Web from 'components/layout/Web'
 import Iframe from 'components/layout/Iframe'
 import Product from 'views/Product'
@@ -47,6 +49,8 @@ function App() {
                     </Route>
                   </Switch>
                   <CO2EModal />
+                  <FootprintModal />
+                  <TransportationModal />
                 </SearchProvider>
               </ModalProvider>
             </StyleProvider>
