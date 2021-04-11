@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 
 import ModalContext from 'utils/ModalContext'
-import SearchContext from 'utils/SearchContext'
 import Modal from 'components/base/Modal'
 import MagicLink from 'components/base/MagicLink'
 import Button from 'components/base/Button'
@@ -11,7 +10,6 @@ const Title = styled.h2``
 const Text = styled.p``
 export default function CO2EModal() {
   const { CO2E, setCO2E } = useContext(ModalContext)
-  const { kgco2 } = useContext(SearchContext)
   return (
     <Modal open={CO2E} setOpen={setCO2E}>
       <Title>
